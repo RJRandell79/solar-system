@@ -18,10 +18,10 @@ class PlanetSeeder extends Seeder
         $time = Carbon::now();
 
         $planets = [
-            ['id' => 1, 'name' => 'Mercury', 'star_id' => 1, 'diameter' => 4665, 'distance' => 5677, 'orbit_length' => 88, 'created_at' => $time, 'updated_at' => $time],
-            ['id' => 2, 'name' => 'Venus', 'star_id' => 1, 'diameter' => 5673, 'distance' => 9636, 'orbit_length' => 136, 'created_at' => $time, 'updated_at' => $time],
-            ['id' => 3, 'name' => 'Earth', 'star_id' => 1, 'diameter' => 5783, 'distance' => 13946, 'orbit_length' => 365.24, 'created_at' => $time, 'updated_at' => $time],
-            ['id' => 4, 'name' => 'Mars', 'star_id' => 1, 'diameter' => 4845, 'distance' => 19465, 'orbit_length' => 625, 'created_at' => $time, 'updated_at' => $time]
+            ['id' => 1, 'name' => 'Mercury', 'star_id' => 1, 'diameter' => 3031.9, 'distance' => 39.2, 'orbit_length' => 88, 'created_at' => $time, 'updated_at' => $time],
+            ['id' => 2, 'name' => 'Venus', 'star_id' => 1, 'diameter' => 7520.8, 'distance' => 67, 'orbit_length' => 225, 'created_at' => $time, 'updated_at' => $time],
+            ['id' => 3, 'name' => 'Earth', 'star_id' => 1, 'diameter' => 7915.5, 'distance' => 92.89, 'orbit_length' => 365.25, 'created_at' => $time, 'updated_at' => $time],
+            ['id' => 4, 'name' => 'Mars', 'star_id' => 1, 'diameter' => 4212.3, 'distance' => 131.89, 'orbit_length' => 687, 'created_at' => $time, 'updated_at' => $time]
         ];
 
         foreach ($planets as $planet) {
