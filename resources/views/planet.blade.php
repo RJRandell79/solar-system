@@ -38,7 +38,7 @@
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Diameter <span class="text-muted">(miles)</span></th>
-                        <th scope="col">Orbital Distance <span class="text-muted">(million miles)</span></th>
+                        <th scope="col">Orbital Distance <span class="text-muted">(miles)</span></th>
                         <th scope="col">Orbital Length <span class="text-muted">(days)</span></th>
                     </tr>
                 </thead>
