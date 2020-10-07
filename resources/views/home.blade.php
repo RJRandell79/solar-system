@@ -28,7 +28,7 @@
                     @foreach($planets as $planet)
                     <tr>
                         <th scope="row">{{ $planet->id }}</th>
-                        <td><a href="#" title="{{ $planet->name }}">{{ $planet->name }}</a></td>
+                        <td><a href="{{ url('planet/' . strtolower($planet->name)) }}" title="{{ $planet->name }}">{{ $planet->name }}</a></td>
                         <td>{{ $planet->diameter }}</td>
                         <td>{{ $planet->distance }}</td>
                         <td>{{ $planet->orbit_length }}</td>

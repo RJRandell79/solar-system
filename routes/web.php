@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlanetController;
+use App\Models\Planet;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/planet/{planet:name}', [PlanetController::class, 'index']);
