@@ -12,30 +12,31 @@
 
     <body>
         <div class="container">
-            <h1 class="py-3">Solar</h1>
-            <ul>
-                @foreach($planets as $planet)
-                <li>
-                    {{ $planet->name }}
-                    <ul>
-                        @foreach($planet->features as $feature)
-                        <li>{{ $feature->name }}
-                        @endforeach
-                    </ul>
-                    <ul>
-                        @foreach($planet->moons as $moon)
-                        <li>{{ $moon->name }}
-                            <ul>
-                                @foreach($moon->features as $feature)
-                                <li>{{ $feature->name }}
-                                @endforeach
-                            </ul>
-                        </li>
-                        @endforeach
-                    </ul>
-                </li>
-                @endforeach
-            </ul>
+            <h1 class="py-3">Solar System</h1>
+
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Diameter <span class="text-muted">(miles)</span></th>
+                        <th scope="col">Orbital Distance <span class="text-muted">(million miles)</span></th>
+                        <th scope="col">Orbital Length <span class="text-muted">(days)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($planets as $planet)
+                    <tr>
+                        <th scope="row">{{ $planet->id }}</th>
+                        <td><a href="#" title="{{ $planet->name }}">{{ $planet->name }}</a></td>
+                        <td>{{ $planet->diameter }}</td>
+                        <td>{{ $planet->distance }}</td>
+                        <td>{{ $planet->orbit_length }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+
         </div>
     </body>
 </html>
