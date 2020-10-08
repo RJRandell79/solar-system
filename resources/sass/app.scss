@@ -7,6 +7,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+body > div {
+  overflow-x: hidden;
+}
+
 .tns-outer {
   position: relative;
   margin: 0 0 3rem;
@@ -70,14 +74,6 @@
 }
 
 .planets-slider {
-    .planet {
-        display: block;
-        width: 50px;
-        height: 50px;
-        margin: 0 auto 15px;
-        background:#000;
-        border-radius: 50%;
-    }
     h5, p {
         text-shadow: 0 0 2px rgba(30, 30, 30, 0.5);
     }
@@ -96,6 +92,81 @@
         transform: scale(1); 
         opacity: 1;
     }
+}
+
+.planet {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  background:#000;
+  border-radius: 50%;
+}
+.nav-item {
+  min-width: 80px;
+  .nav-link {
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    .planet {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto 5px;
+      ~ span {
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -88px;
+  z-index: 1;
+  transition: all 0.25s ease-in;
+  &.open-menu {
+    left: 0;
+  }
+  .menu-toggle {
+    position: absolute;
+    width: 30px; 
+    height: 150px; 
+    left: 100%; 
+    top: 50px;
+    padding: 0 1rem;
+    border-radius: 0 5px 5px 0;
+    span {
+      position: relative;
+      top: 30%;
+      left: -50px;
+      width: 100px;
+      display: block;
+      height: 24px;
+      margin: 6px 0 0;
+      transform: rotate(-90deg);
+    }
+  }
+  .nav {
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+}
+
+.canvas {
+  position: relative;
+  transition: all 0.5s ease-in;
+  &.open {
+    transform: translate(45%, 0);
+  }
+  .off-canvas-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+    display: none;
+  }
 }
 
 .background-img-wrapper {
@@ -118,6 +189,11 @@ h1 {
     z-index: 1;
 }
 
+.extra-padding {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
 @media only screen and (max-width:991px) {
 }
 
@@ -131,4 +207,38 @@ h1 {
 }
 
 @media only screen and (max-width:600px) {
+}
+
+@media only screen and (max-width:530px), screen and (max-height:530px) {
+  .menu, .menu.open-menu {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    .nav {
+      flex-direction: row;
+      flex-grow: inherit;
+      .nav-item {
+        width: 100%;
+        .nav-link {
+          .planet {
+            float: left;
+            margin: 0 10px 0 0;
+            ~ span {
+              top: 4px;
+              width: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  .canvas {
+    .off-canvas-btn {
+      display: block;
+    }
+  }
+  .extra-padding {
+    padding-left: inherit;
+    padding-right: inherit;
+  }
 }
