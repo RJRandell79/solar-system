@@ -26,11 +26,13 @@
                         <div class="planets-slider">
                             @foreach($planets as $planet)
                             <div>
-                                <span class="planet">&nbsp;</span>
-                                <h5 class="card-title text-light text-center">{{ $planet->name }}</h5>
-                                <p class="text-light text-center m-0">Diameter: {{ $planet->diameter }} <span>miles</span></p>
-                                <p class="text-light text-center m-0">Distance: {{ $planet->distance }} <span>million miles</span></p>
-                                <p class="text-light text-center m-0">Orbital Length: {{ $planet->orbit_length }} <span>days</span></p>
+                                <a class="text-decoration-none" href="{{ url('planet/' . strtolower($planet->name)) }}" title="{{ $planet->name }}">
+                                    <span class="planet">&nbsp;</span>
+                                    <h5 class="card-title text-light text-center">{{ $planet->name }}</h5>
+                                    <p class="text-light text-center m-0">Diameter: {{ $planet->diameter }} <span>miles</span></p>
+                                    <p class="text-light text-center m-0">Distance: {{ $planet->distance }} <span>million miles</span></p>
+                                    <p class="text-light text-center m-0">Orbital Length: {{ $planet->orbit_length }} <span>days</span></p>
+                                </a>
                             </div>
                             @endforeach
                         </div>
