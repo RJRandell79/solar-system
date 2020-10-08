@@ -7,41 +7,39 @@
         <title>Solar System</title>
         
         <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
 
     <body>
         <div class="position-relative min-vw-100 min-vh-100 bg-dark">
             <figure class="position-absolute mb-0 background-img-wrapper">
-                <img src="/images/istockphoto-1005439278-1024x1024.jpg" />
+               <img src="/images/istockphoto-1189556356-1024x1024.jpg" />
             </figure>
 
-            <div class="container-fluid">    
-                <h1 class="mx-0 py-3 w-100 text-center"><a class="text-white" href="/" title="The Planets">The Planets</a></h1>
+            <div class="d-flex min-vh-100 min-vw-100 align-items-center">   
+                <div class="min-vw-100"> 
+                    <h1 class="mt-0 py-3 w-100 text-center"><a class="text-white" href="/" title="The Planets">The Planets</a></h1>
 
-                <div class="container">
-                    <div class="d-flex flex-wrap flex-row">
-                        @foreach($planets as $planet)
-                            <div class="card planet-card">
-                                <img src="/images/istockphoto-1005439278-1024x1024.jpg" class="card-img-top align-self-start" alt="{{ $planet->name }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $planet->name }}</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <ul class="list-group list-group-flush w-100">
-                                    <li class="list-group-item"><span>Diameter:</span><span class="float-right">{{ $planet->diameter }} <span class="text-muted">miles</span></span></li>
-                                    <li class="list-group-item">Orbital Distance: <span class="float-right">{{ $planet->distance }} <span class="text-muted">million miles</span></span></li>
-                                    <li class="list-group-item">Orbital Length: <span class="float-right">{{ $planet->orbit_length }} <span class="text-muted">days</span></span></li>
-                                </ul>
-                                <div class="card-body align-self-end">
-                                    <a href="{{ url('planet/' . strtolower($planet->name)) }}" class="btn btn-primary">Visit {{ $planet->name }}</a>
-                                </div>
+                    <div class="container overflow-hidden">
+                        <div class="planets-slider">
+                            @foreach($planets as $planet)
+                            <div>
+                                <span class="planet">&nbsp;</span>
+                                <h5 class="card-title text-light text-center">{{ $planet->name }}</h5>
+                                <p class="text-light text-center m-0">Diameter: {{ $planet->diameter }} <span>miles</span></p>
+                                <p class="text-light text-center m-0">Distance: {{ $planet->distance }} <span>million miles</span></p>
+                                <p class="text-light text-center m-0">Orbital Length: {{ $planet->orbit_length }} <span>days</span></p>
                             </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </div>
                 
             </div>
         </div>
     </body>
+
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </html>

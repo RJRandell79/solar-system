@@ -7,6 +7,97 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+.tns-outer {
+  position: relative;
+  margin: 0 0 3rem;
+  .tns-nav {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+    button {
+      width: 20px;
+      height: 2px;
+      margin: 0 2px;
+      padding: 0;
+      background: #CCC;
+      border: none;
+      -webkit-appearance: none;
+      &.tns-nav-active {
+        background: #3490DC;
+      }
+    }
+    & ~ button {
+      display: none;
+    }
+  }
+  .tns-controls {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 27px;
+    margin: -30px 0 0;
+    z-index: 2;
+    button {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      color: #212529;
+      background:rgba(233,233,233,0.5);
+      border: none;
+      -webkit-appearance: none;
+      i {
+          position: relative;
+          top: 1px;
+      }
+      &:first-of-type {
+        left: 0;
+        border-radius: 50%;
+      }
+      &:last-of-type {
+        right: 0;
+        border-radius: 50%;
+      }
+    }
+    & ~ button {
+      display: none;
+    }
+  }
+}
+
+.planets-slider {
+    .planet {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 15px;
+        background:#000;
+        border-radius: 50%;
+    }
+    h5, p {
+        text-shadow: 0 0 2px rgba(30, 30, 30, 0.5);
+    }
+    p {
+        font-size: 0.85em;
+        span {
+            color: #d6d6d6;
+        }
+    }
+    .tns-item {
+        transform: scale(0.75);
+        opacity: 0.6;
+        transition: all 0.5s ease-in;
+    }
+    .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active { 
+        transform: scale(1); 
+        opacity: 1;
+    }
+}
+
 .background-img-wrapper {
     top: 0;
     right: 0;
@@ -18,6 +109,7 @@
         height: 100%;
         max-width: 100%;
         object-fit: cover;
+        opacity: 0.7;
     }
 }
 
@@ -25,43 +117,18 @@ h1 {
     position: relative;
     z-index: 1;
 }
-.planet-card {
-    margin: 0 1% 1.5rem;
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex-basis: 31%; 
-    flex-grow: 1;
-    background: rgba(0,0,0,0.8);
-    border: 1px solid #0d4c19;
-    .card-body {
-        .card-title, .card-text {
-            color: #0ad00d;
-        }
-        .btn-primary {
-            background-color: #0d4c19;
-            border-color: #0ad00d;
-            &:hover {
-                background-color: #0f7923;
-            }
-        }
-    }
-    ul li {
-        font-size: 0.85em;
-        background: transparent;
-        color: #0ad00d;
-        border: 1px solid #0d4c19;
-    }
-}
 
 @media only screen and (max-width:991px) {
-    .planet-card {
-        flex-basis: 48%;
+}
+
+@media only screen and (max-width:768px) {
+    .planets-slider {
+        .tns-item {
+            transform: scale(1);
+            opacity: 1;
+        }
     }
 }
 
 @media only screen and (max-width:600px) {
-    .planet-card {
-        margin: 0 0 1.5rem;
-        flex-basis: 100%;
-    }
 }
