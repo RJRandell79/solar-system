@@ -77,7 +77,7 @@
                     <div class="container position-relative" style="z-index: 1;">
                         <h1 class="display-4 text-white">{{ $planet->name }}</h1>
                         <hr class="my-4 bg-white" />
-                        <p class="lead text-white">A range of 2, 3, 4 &amp; 5 bedroom homes across Cheshire, Cumbria, Greater Manchester, Lancashire and Merseyside, offering incentives such as Help to Buy, Part Exchange and Movemaker; there’s never been a better time to buy a Wainhome.</p>
+                        <p class="lead text-white">{{ $planet->description }}</p>
                     </div>
                 </div>
 
