@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
 
 // Variables
 @import 'variables';
@@ -70,6 +71,44 @@ body > div {
     & ~ button {
       display: none;
     }
+  }
+}
+
+.jumbotron {
+  min-height: 700px;
+  padding-top: 5rem;
+  figure, 
+  .jumbotron-banner-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .jumbotron-banner-gradient {
+    background: #000; 
+    background: linear-gradient(0deg, rgba(0,0,0,0.925) 0%, rgba(253,187,45,0) 45%);
+  }
+  h1 {
+    font-family: $font-open-sans;
+    font-size: 7rem;
+    letter-spacing: 1rem;
+  }
+  .lead {
+    width: 600px;
+  }
+}
+
+.planetary-stat {
+  flex: 1 1 auto;
+  font-size: 1.5rem;
+  color: #FFF;
+  span {
+    font-size: 0.5em;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 }
 
@@ -204,9 +243,41 @@ h1 {
             opacity: 1;
         }
     }
+    .jumbotron {
+      min-height: inherit;
+      h1 {
+        font-size: 5rem;
+        letter-spacing: 0.66rem;
+      }
+      .lead {
+        width: 100%;
+      }
+    }
+    .planetary-stat {
+      flex: 0 0 50%;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+  .jumbotron {
+    h1 {
+      font-size: 12rem;
+      letter-spacing: 1rem;
+    }
+  }
 }
 
 @media only screen and (max-width:600px) {
+   .jumbotron {
+      h1 {
+        font-size: 4.5rem;
+        letter-spacing: 0.5rem;
+      }
+    }
+   .planetary-stat {
+      flex: 0 0 100%;
+      font-size: 1.25rem;
+    }
 }
 
 @media only screen and (max-width:530px), screen and (max-height:530px) {
@@ -240,5 +311,16 @@ h1 {
   .extra-padding {
     padding-left: inherit;
     padding-right: inherit;
+  }
+  .planetary-stat {
+      flex: 0 0 50%;
+    }
+}
+
+@media only screen and (max-width:420px) {
+  .jumbotron {
+    h1 {
+      font-size: 3rem;
+    }
   }
 }

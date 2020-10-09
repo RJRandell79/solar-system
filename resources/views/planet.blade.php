@@ -68,63 +68,35 @@
 
             <div class="canvas">
                 <a class="off-canvas-btn btn btn-primary" href="#" title="Menu">Menu</a>
-                <div class="jumbotron jumbotron-fluid mb-4 position-relative bg-dark extra-padding" style="padding-top: 27.5rem;">
-                    <figure class="position-absolute w-100 mb-0" style="top: 0; right: 0; bottom: 0; left: 0;">
+                <div class="d-flex flex-wrap jumbotron jumbotron-fluid mb-4 position-relative bg-dark pb-0 extra-padding">
+                    <figure>
                         <img src="/images/istockphoto-1005439278-1024x1024.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="...">
                     </figure>
-                    <div class="position-absolute w-100 mb-0 development-banner-gradient" style="top: 0; right: 0; bottom: 0; left: 0;"></div>
+                    <div class="jumbotron-banner-gradient"></div>
 
-                    <div class="container position-relative" style="z-index: 1;">
-                        <h1 class="display-4 text-white">{{ $planet->name }}</h1>
-                        <hr class="my-4 bg-white" />
-                        <p class="lead text-white">{{ $planet->description }}</p>
+                    <div class="container d-flex flex-wrap align-items-center" style="z-index: 1;">
+                        <div>
+                        <h1 class="display-1 text-white text-uppercase font-weight-bolder mb-5">{{ $planet->name }}</h1>
+                        <p class="lead text-white font-weight-bold">{{ $planet->description }}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="container-fluid extra-padding">
-                    <div class="container">
-        
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Diameter <span class="text-muted">(miles)</span></th>
-                                    <th scope="col">Orbital Distance <span class="text-muted">(million miles)</span></th>
-                                    <th scope="col">Orbital Length <span class="text-muted">(days)</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>{{ $planet->diameter }}</td>
-                                    <td>{{ $planet->distance }}</td>
-                                    <td>{{ $planet->orbit_length }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        @if( $planet->moons()->exists() )
-                        <h3>Satellites</h3>
-                        <table class="table table-sm table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Diameter <span class="text-muted">(miles)</span></th>
-                                    <th scope="col">Orbital Distance <span class="text-muted">(miles)</span></th>
-                                    <th scope="col">Orbital Length <span class="text-muted">(days)</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($planet->moons as $moon)
-                                <tr>
-                                    <td><a href="#" title="{{ $moon->name }}">{{ $moon->name }}</a></td>
-                                    <td>{{ $moon->diameter }}</td>
-                                    <td>{{ $moon->distance }}</td>
-                                    <td>{{ $moon->orbit_length }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                        @endif
-
+                    <div class="container d-flex flex-wrap align-items-end" style="z-index: 1;">
+                        <div class="planetary-stat">
+                            <span>Day</span>
+                            <p>34,200 Hours</p>
+                        </div>
+                        <div class="planetary-stat">
+                            <span>Diameter</span>
+                            <p>{{ $planet->diameter }} miles</p>
+                        </div>
+                        <div class="planetary-stat">
+                            <span>Moons</span>
+                            <p>{{ count($planet->moons) }}</p>
+                        </div>
+                        <div class="planetary-stat">
+                            <span>Planet Type</span>
+                            <p>Gas Giant</p>
+                        </div>
                     </div>
                 </div>
             </div>

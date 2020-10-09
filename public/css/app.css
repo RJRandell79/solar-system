@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-/*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+400;800&display=swap);@charset "UTF-8";
 
 :root {
   --blue: #3490dc;
@@ -10975,6 +10970,49 @@ body > div {
   display: none;
 }
 
+.jumbotron {
+  min-height: 700px;
+  padding-top: 5rem;
+}
+
+.jumbotron figure,
+.jumbotron .jumbotron-banner-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.jumbotron .jumbotron-banner-gradient {
+  background: #000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.925) 0%, rgba(253, 187, 45, 0) 45%);
+}
+
+.jumbotron h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 7rem;
+  letter-spacing: 1rem;
+}
+
+.jumbotron .lead {
+  width: 600px;
+}
+
+.planetary-stat {
+  flex: 1 1 auto;
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+.planetary-stat span {
+  font-size: 0.5em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .planets-slider h5,
 .planets-slider p {
   text-shadow: 0 0 2px rgba(30, 30, 30, 0.5);
@@ -11116,6 +11154,42 @@ h1 {
     transform: scale(1);
     opacity: 1;
   }
+
+  .jumbotron {
+    min-height: inherit;
+  }
+
+  .jumbotron h1 {
+    font-size: 5rem;
+    letter-spacing: 0.66rem;
+  }
+
+  .jumbotron .lead {
+    width: 100%;
+  }
+
+  .planetary-stat {
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .jumbotron h1 {
+    font-size: 12rem;
+    letter-spacing: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .jumbotron h1 {
+    font-size: 4.5rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .planetary-stat {
+    flex: 0 0 100%;
+    font-size: 1.25rem;
+  }
 }
 
 @media only screen and (max-width: 530px), screen and (max-height: 530px) {
@@ -11156,6 +11230,16 @@ h1 {
   .extra-padding {
     padding-left: inherit;
     padding-right: inherit;
+  }
+
+  .planetary-stat {
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .jumbotron h1 {
+    font-size: 3rem;
   }
 }
 
