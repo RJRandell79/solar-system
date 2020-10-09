@@ -83,11 +83,11 @@
                     <div class="container d-flex flex-wrap align-items-end" style="z-index: 1;">
                         <div class="planetary-stat">
                             <span>Day</span>
-                            <p>34,200 Hours</p>
+                            <p>{{ number_format($planet->day_length) }} Hours</p>
                         </div>
                         <div class="planetary-stat">
                             <span>Diameter</span>
-                            <p>{{ $planet->diameter }} miles</p>
+                            <p>{{ number_format($planet->diameter, 1) }} miles</p>
                         </div>
                         <div class="planetary-stat">
                             <span>Moons</span>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="planetary-stat">
                             <span>Planet Type</span>
-                            <p>Gas Giant</p>
+                            <p>{{ $planet->planet_type }}</p>
                         </div>
                     </div>
                 </div>

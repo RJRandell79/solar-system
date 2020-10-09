@@ -20,6 +20,8 @@ class CreatePlanetsTable extends Migration
             $table->float('diameter');
             $table->float('distance', 10, 2);
             $table->float('orbit_length');
+            $table->float('day_length');
+            $table->string('planet_type');
             $table->text('description');
             $table->timestamps();
         });
