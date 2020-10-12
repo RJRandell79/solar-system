@@ -9,7 +9,8 @@ class PlanetController extends Controller
 {
     public function index($planetname) {
         return view('planet', [
-            'planet' => Planet::where('name', $planetname)->firstOrFail()
+            'planet' => Planet::where('name', $planetname)->firstOrFail(),
+            'allplanets' => Planet::all()
         ]);
     }
 }
