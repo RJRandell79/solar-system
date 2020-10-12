@@ -68,9 +68,9 @@
 
             <div class="canvas">
                 <a class="off-canvas-btn btn btn-primary" href="#" title="Menu">Menu</a>
-                <div class="d-flex flex-wrap jumbotron jumbotron-fluid mb-4 position-relative bg-dark pb-0 extra-padding">
+                <div class="d-flex flex-wrap jumbotron jumbotron-fluid position-relative bg-dark pb-0 extra-padding">
                     <figure>
-                        <img src="/images/istockphoto-1005439278-1024x1024.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="...">
+                        <img src="/images/PIA23791-Venus-NewlyProcessedView-20200608.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="...">
                     </figure>
                     <div class="jumbotron-banner-gradient"></div>
 
@@ -99,6 +99,20 @@
                         </div>
                     </div>
                 </div>
+
+                <section>
+                    <ul class="system">
+                        <li class="sun">Sun</li>
+                        <li>Mercury</li>
+                        <li>Venus</li>
+                        <li>Earth</li>
+                        <li>Mars</li>
+                        <li>Jupiter</li>
+                        <li>Saturn</li>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                    </ul>
+                </section>
             </div>
         </div>
     </body>
