@@ -102,9 +102,9 @@
 
                 <section>
                     <ul class="system">
-                        <li class="sun">Sun</li>
+                        <li class="sun"><p>Sun</p></li>
                         @foreach($allplanets as $otherplanet)
-                        <li><p>{{ $otherplanet->distance }} million miles</p><div></div><p>{{ $otherplanet->name }}<span>{{ count($otherplanet->moons) }} moon{{ count($otherplanet->moons) > 1 || count($otherplanet->moons) === 0 ? 's' : '' }}</span></p></li>
+                        <li class="{{ strtolower($otherplanet->name) }}"><p>{{ $otherplanet->distance }} <span>million miles</span></p><div></div><p>{{ $otherplanet->name }}<span>{{ count($otherplanet->moons) }} moon{{ count($otherplanet->moons) > 1 || count($otherplanet->moons) === 0 ? 's' : '' }}</span></p></li>
                         @endforeach
                     </ul>
                 </section>

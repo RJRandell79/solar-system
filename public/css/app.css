@@ -11141,6 +11141,87 @@ body > div {
   opacity: 0.7;
 }
 
+.system {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem 1rem 0;
+  background: #000;
+  justify-content: space-between;
+}
+
+.system li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.system li p {
+  width: 100%;
+  margin: 0;
+  color: #FFF;
+  line-height: 120%;
+  text-align: center;
+}
+
+.system li p span {
+  display: block;
+  font-size: 0.75em;
+}
+
+.system li p:first-of-type {
+  align-self: flex-start;
+}
+
+.system li p:last-of-type {
+  align-self: flex-end;
+}
+
+.system li div {
+  width: 70px;
+  height: 70px;
+  margin: 0.75rem auto;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.system li.sun {
+  padding: 0 1rem;
+  border-right: 2px solid #FF0;
+  border-radius: 50%;
+}
+
+.system li.sun p:first-of-type {
+  align-self: center;
+}
+
+.system li.mercury div {
+  width: 10px;
+  height: 10px;
+}
+
+.system li.venus div,
+.system li.earth div {
+  width: 20px;
+  height: 20px;
+}
+
+.system li.mars div {
+  width: 13px;
+  height: 13px;
+}
+
+.system li.saturn div {
+  width: 60px;
+  height: 60px;
+}
+
+.system li.uranus div,
+.system li.neptune div {
+  width: 30px;
+  height: 30px;
+}
+
 h1 {
   position: relative;
   z-index: 1;
