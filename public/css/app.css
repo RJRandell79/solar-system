@@ -11146,7 +11146,7 @@ body > div {
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 1rem 2rem 1rem 0;
+  padding: 8rem 2rem 8rem 0;
   background: #000;
   justify-content: space-between;
 }
@@ -11221,6 +11221,63 @@ body > div {
 .system li.neptune div {
   width: 30px;
   height: 30px;
+}
+
+.overview {
+  position: relative;
+  margin: 0;
+  padding: 8rem 0;
+  background: #000;
+}
+
+.overview figure,
+.overview .banner-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+.overview .banner-gradient {
+  background: #000;
+  background: linear-gradient(90deg, black 40%, rgba(253, 187, 45, 0) 66%);
+}
+
+.overview span {
+  position: absolute;
+  left: 5%;
+  top: 2.5rem;
+  color: #FFF;
+  font-size: 12rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.overview h2 {
+  margin: 0 0 2rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
+  text-transform: uppercase;
+}
+
+.overview h2,
+.overview p {
+  color: #FFF;
+}
+
+.overview hr {
+  width: 66px;
+  margin: 0 0 2rem;
+  background: #999;
+}
+
+.overview p {
+  width: 50%;
 }
 
 h1 {

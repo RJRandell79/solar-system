@@ -230,7 +230,7 @@ body > div {
   display: flex;
   width: 100%;
   margin: 0;
-  padding: 1rem 2rem 1rem 0;
+  padding: 8rem 2rem 8rem 0;
   background: #000;
   justify-content: space-between;
   li {
@@ -300,6 +300,54 @@ body > div {
         height: 30px;
       }
     }
+  }
+}
+
+.overview {
+  position: relative;
+  margin: 0;
+  padding: 8rem 0;
+  background: #000;
+  figure, .banner-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    z-index: 0;
+  }
+  .banner-gradient {
+    background: #000; 
+    background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(253,187,45,0) 66%);
+  }
+  span {
+    position: absolute;
+    left: 5%;
+    top: 2.5rem;
+    color: #FFF;
+    font-size: 12rem;
+    font-family: $font-open-sans;
+    font-weight: 600;
+  }
+  h2 {
+    margin: 0 0 2rem;
+    font-family: $font-open-sans;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.75rem;
+    text-transform: uppercase;
+  }
+  h2, p {
+    color: #FFF;
+  }
+  hr {
+    width: 66px;
+    margin: 0 0 2rem;
+    background: #999;
+  }
+  p {
+    width: 50%;
   }
 }
 
