@@ -11233,7 +11233,8 @@ body > div {
   height: 30px;
 }
 
-.overview {
+.overview,
+.features {
   position: relative;
   margin: 0;
   padding: 8rem 0;
@@ -11241,7 +11242,9 @@ body > div {
 }
 
 .overview figure,
-.overview .banner-gradient {
+.overview .banner-gradient,
+.features figure,
+.features .banner-gradient {
   position: absolute;
   top: 0;
   right: 0;
@@ -11251,12 +11254,14 @@ body > div {
   z-index: 0;
 }
 
-.overview .banner-gradient {
+.overview .banner-gradient,
+.features .banner-gradient {
   background: #000;
   background: linear-gradient(90deg, black 40%, rgba(253, 187, 45, 0) 66%);
 }
 
-.overview h2 {
+.overview h2,
+.features h2 {
   margin: 0 0 2rem;
   font-family: "Open Sans", sans-serif;
   font-size: 3.5rem;
@@ -11266,18 +11271,81 @@ body > div {
 }
 
 .overview h2,
-.overview p {
+.overview p,
+.features h2,
+.features p {
   color: #FFF;
 }
 
-.overview hr {
+.overview hr,
+.features hr {
   width: 66px;
   margin: 0 0 2rem;
   background: #999;
 }
 
-.overview p {
+.overview p,
+.features p {
   width: 50%;
+}
+
+.features hr {
+  float: right;
+  margin: 0 14px 0 0;
+}
+
+.features h2,
+.features h3 {
+  margin: 2rem 0;
+}
+
+.features h2 {
+  text-align: right;
+}
+
+.features h3 {
+  color: #FFF;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.features p {
+  float: right;
+  width: 70%;
+  margin: 0 14px 1rem 0;
+  text-align: right;
+}
+
+.features .background {
+  position: relative;
+  margin: 6rem 0;
+  background: #000;
+}
+
+.features .background .banner-gradient {
+  background: linear-gradient(60deg, rgba(253, 187, 45, 0) 40%, rgba(0, 0, 0, 0.7) 66%);
+}
+
+.features .background p {
+  float: none;
+  width: 100%;
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+.features .background ul {
+  list-style-type: none;
+  margin: 0 0 6rem;
+  padding: 0 0 0 6rem;
+}
+
+.features .background ul li {
+  margin: 0 0 1rem;
+  color: #FFF;
+}
+
+.features .background ul li:last-of-type {
+  margin: 0;
 }
 
 h1 {
@@ -11408,6 +11476,14 @@ h1 {
 
   .overview p {
     width: 75%;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .features h3 {
+    font-size: 1.25rem;
   }
 }
 

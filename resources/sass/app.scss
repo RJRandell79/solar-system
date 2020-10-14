@@ -311,7 +311,7 @@ body > div {
   }
 }
 
-.overview {
+.overview, .features {
   position: relative;
   margin: 0;
   padding: 8rem 0;
@@ -348,6 +348,56 @@ body > div {
   p {
     width: 50%;
   }
+}
+.features {
+  hr {
+    float: right;
+    margin: 0 14px 0 0;
+  }
+  h2, h3 {
+    margin: 2rem 0;
+  }
+  h2 {
+    text-align: right;
+  }
+  h3 {
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  p {
+    float: right;
+    width: 70%;
+    margin: 0 14px 1rem 0;
+    text-align: right;
+  }
+  .background {
+    position: relative;
+    margin: 6rem 0;
+    background: #000;
+    .banner-gradient {
+      background: linear-gradient(60deg, rgba(253,187,45,0) 40%, rgba(0,0,0,0.7) 66%);
+    }
+    p {
+      float: none;
+      width: 100%;
+      margin: 0 0 1rem;
+      text-align: left;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0 0 6rem;
+      padding: 0 0 0 6rem;
+      li {
+        margin: 0 0 1rem;
+        color: #FFF;
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+
 }
 
 h1 {
@@ -469,6 +519,14 @@ h1 {
     }
     p {
       width: 75%;
+    }
+  }
+  .features {
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.25rem;
     }
   }
 }
