@@ -125,15 +125,15 @@
                     <div class="container d-flex flex-wrap align-items-end" style="z-index: 1;">
                         <div class="planetary-stat">
                             <span>One way light time to Sun <span>(mins)</span></span>
-                            <p>44.924</p>
+                            <p>{{ number_format(($planet->distance * 1000000) / (186282 * 60), 2) }}</p>
                         </div>
                         <div class="planetary-stat">
-                            <span>Distance to Sun <span>(miles)</span></span>
-                            <p>502,000</p>
+                            <span>Distance to Sun <span>(million miles)</span></span>
+                            <p>{{ $planet->distance }}</p>
                         </div>
                         <div class="planetary-stat">
                             <span>Length of year <span>(Earth days)</span></span>
-                            <p>4,333</p>
+                            <p>{{ number_format($planet->orbit_length) }}</p>
                         </div>
                     </div>
                 </section>
