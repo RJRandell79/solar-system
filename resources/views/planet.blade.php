@@ -114,7 +114,6 @@
                         <img src="/images/venus-clouds.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="...">
                     </figure>
                     <div class="banner-gradient"></div>
-                    <span>01</span>
                     <div class="container position-relative" style="z-index: 1;">
                         <hr />
                         <h2>Overview</h2>

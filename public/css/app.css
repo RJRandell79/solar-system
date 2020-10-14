@@ -11246,16 +11246,6 @@ body > div {
   background: linear-gradient(90deg, black 40%, rgba(253, 187, 45, 0) 66%);
 }
 
-.overview span {
-  position: absolute;
-  left: 5%;
-  top: 2.5rem;
-  color: #FFF;
-  font-size: 12rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-
 .overview h2 {
   margin: 0 0 2rem;
   font-family: "Open Sans", sans-serif;
@@ -11327,6 +11317,10 @@ h1 {
   .system li.sun {
     display: none;
   }
+
+  .overview {
+    padding: 4rem 1rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -11390,6 +11384,20 @@ h1 {
 
   .planetary-stat {
     flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .overview .banner-gradient {
+    background: linear-gradient(90deg, black 20%, rgba(253, 187, 45, 0) 95%);
+  }
+
+  .overview h2 {
+    font-size: 2rem;
+  }
+
+  .overview p {
+    width: 75%;
   }
 }
 

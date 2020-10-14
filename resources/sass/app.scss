@@ -321,15 +321,6 @@ body > div {
     background: #000; 
     background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(253,187,45,0) 66%);
   }
-  span {
-    position: absolute;
-    left: 5%;
-    top: 2.5rem;
-    color: #FFF;
-    font-size: 12rem;
-    font-family: $font-open-sans;
-    font-weight: 600;
-  }
   h2 {
     margin: 0 0 2rem;
     font-family: $font-open-sans;
@@ -396,6 +387,9 @@ h1 {
         }
       }
     }
+    .overview {
+      padding: 4rem 1rem;
+    }
 }
 
 @media only screen and (min-width:1200px) {
@@ -455,6 +449,20 @@ h1 {
   .planetary-stat {
       flex: 0 0 50%;
     }
+}
+
+@media only screen and (max-width:576px) {
+  .overview {
+    .banner-gradient {
+      background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(253,187,45,0) 95%);
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      width: 75%;
+    }
+  }
 }
 
 @media only screen and (max-width:420px) {
