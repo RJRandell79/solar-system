@@ -117,7 +117,7 @@
                     <div class="container position-relative" style="z-index: 1;">
                         <hr />
                         <h2>Overview</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Orci sagittis eu volutpat odio facilisis mauris sit. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Habitant morbi tristique senectus et netus et. Auctor eu augue ut lectus arcu bibendum at varius vel. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Et malesuada fames ac turpis. Faucibus et molestie ac feugiat sed lectus. Ut morbi tincidunt augue interdum velit euismod in. Metus vulputate eu scelerisque felis imperdiet. Vivamus at augue eget arcu. Accumsan lacus vel facilisis volutpat est velit egestas. Massa tincidunt dui ut ornare. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus.</p>
+                        <p>{{ $planet->overview->overview }}</p>
                     </div>
                 </section>
             </div>

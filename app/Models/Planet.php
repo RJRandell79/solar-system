@@ -17,7 +17,12 @@ class Planet extends Model
         return $this->hasMany(Moon::class);
     }
 
+    public function overview() {
+        return $this->hasOne(Overview::class);
+    }
+
     public function features() {
         return $this->morphMany(Features::class, 'featureable');
     }
 }
+ 
