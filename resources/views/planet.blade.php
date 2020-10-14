@@ -77,7 +77,7 @@
                     <div class="container d-flex flex-wrap align-items-center" style="z-index: 1;">
                         <div>
                         <h1 class="display-1 text-white text-uppercase font-weight-bolder mb-5">{{ $planet->name }}</h1>
-                        <p class="lead text-white font-weight-bold">{{ $planet->description }}</p>
+                        <p class="lead text-white font-weight-bold">{{ $planet->overview->description }}</p>
                         </div>
                     </div>
                     <div class="container d-flex flex-wrap align-items-end" style="z-index: 1;">

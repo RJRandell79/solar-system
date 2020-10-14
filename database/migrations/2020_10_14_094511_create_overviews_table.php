@@ -16,6 +16,7 @@ class CreateOverviewsTable extends Migration
         Schema::create('overviews', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('planet_id');
+            $table->text('description');
             $table->text('overview');
             $table->timestamps();
         });
