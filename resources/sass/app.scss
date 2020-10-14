@@ -384,6 +384,18 @@ h1 {
     .planetary-stat {
       flex: 0 0 50%;
     }
+    .system {
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+      li {
+        margin: 0 2.5% 1rem;
+        flex-basis: 20%;
+        flex-grow: 1;
+        &.sun {
+          display: none;
+        }
+      }
+    }
 }
 
 @media only screen and (min-width:1200px) {
