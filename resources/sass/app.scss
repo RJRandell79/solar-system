@@ -103,6 +103,10 @@ body > div {
   }
 }
 
+.stats {
+  padding: 8rem 2rem;
+  background: #000;
+}
 .planetary-stat {
   flex: 1 1 auto;
   font-size: 1.5rem;
@@ -111,6 +115,10 @@ body > div {
     font-size: 0.5em;
     font-weight: 300;
     text-transform: uppercase;
+    span {
+      font-size: inherit;
+      color: #666;
+    }
   }
 }
 
