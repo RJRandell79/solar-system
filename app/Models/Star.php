@@ -14,6 +14,6 @@ class Star extends Model
     }
 
     public function environment() {
-        return $this->HasOne(Environment::class);
+        return $this->hasOne(Environment::class);
     }
 }
