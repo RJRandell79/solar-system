@@ -11234,7 +11234,8 @@ body > div {
 }
 
 .overview,
-.features {
+.features,
+.indepth {
   position: relative;
   margin: 0;
   padding: 8rem 0;
@@ -11244,7 +11245,9 @@ body > div {
 .overview figure,
 .overview .banner-gradient,
 .features figure,
-.features .banner-gradient {
+.features .banner-gradient,
+.indepth figure,
+.indepth .banner-gradient {
   position: absolute;
   top: 0;
   right: 0;
@@ -11255,13 +11258,15 @@ body > div {
 }
 
 .overview .banner-gradient,
-.features .banner-gradient {
+.features .banner-gradient,
+.indepth .banner-gradient {
   background: #000;
   background: linear-gradient(90deg, black 40%, rgba(253, 187, 45, 0) 66%);
 }
 
 .overview h2,
-.features h2 {
+.features h2,
+.indepth h2 {
   margin: 0 0 2rem;
   font-family: "Open Sans", sans-serif;
   font-size: 3.5rem;
@@ -11273,19 +11278,23 @@ body > div {
 .overview h2,
 .overview p,
 .features h2,
-.features p {
+.features p,
+.indepth h2,
+.indepth p {
   color: #FFF;
 }
 
 .overview hr,
-.features hr {
+.features hr,
+.indepth hr {
   width: 66px;
   margin: 0 0 2rem;
   background: #999;
 }
 
 .overview p,
-.features p {
+.features p,
+.indepth p {
   width: 50%;
 }
 
@@ -11363,6 +11372,19 @@ body > div {
 
 .features .tns-outer .tns-controls button:last-of-type {
   right: 30px;
+}
+
+.indepth p {
+  width: 100%;
+}
+
+.indepth .further-details div {
+  display: flex;
+  align-items: flex-end;
+}
+
+.indepth .further-details div p {
+  color: #999;
 }
 
 h1 {

@@ -191,19 +191,21 @@
 
                 <section class="indepth">
                     <div class="container">
-                        <div class="row">
+                        <div class="row mb-5">
                             <div class="col-md-6 offset-md-3">
                                 <hr />
                                 <h2>In Depth</h2>
                                 <p>{{ $planet->environment->overview }}</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
+                        <div class="row further-details">
+                            <div class="col-md-4">
+                                <p>{{ $planet->environment->more_details }}</p>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4">
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4">
+                                <p>{{ $planet->environment->atmosphere_description }}</p>
                             </div>
                         </div>
                     </div>

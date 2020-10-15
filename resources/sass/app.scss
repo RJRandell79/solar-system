@@ -311,7 +311,7 @@ body > div {
   }
 }
 
-.overview, .features {
+.overview, .features, .indepth {
   position: relative;
   margin: 0;
   padding: 8rem 0;
@@ -413,6 +413,21 @@ body > div {
         &:last-of-type {
           right: 30px;
         }
+      }
+    }
+  }
+}
+
+.indepth {
+  p {
+    width: 100%;
+  }
+  .further-details {
+    div {
+      display: flex;
+      align-items: flex-end;
+      p {
+        color: #999;
       }
     }
   }
