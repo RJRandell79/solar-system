@@ -151,31 +151,41 @@
                         </div>
                     </div>
 
+                    @if($planet->features)
                     <div class="features-slider">
-                        @for($i = 0; $i < 2; $i++)
+                        @foreach($planet->features as $feature)
                         <div>
                             <div class="background">
                                 <figure>
-                                    <img src="/images/venus-clouds.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="...">
+                                    <img src="/images/{{ $feature->image_url }}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="...">
                                 </figure>
                                 <div class="banner-gradient"></div>
                                 <div class="container position-relative py-5" style="z-index: 1;">
                                     <div class="row">
                                         <div class="col-md-5 offset-md-7">
-                                            <h3>Pearls</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <h3>{{ $feature->title }}</h3>
+                                            <p>{{ $feature->overview }}</p>
+                                            @if( ($feature->bullet1_icon && $feature->bullet1) || ($feature->bullet2_icon && $feature->bullet2) || ($feature->bullet3_icon && $feature->bullet3) )
                                             <ul>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                                @if( $feature->bullet1_icon && $feature->bullet1 )
+                                                <li><i class="{{ $feature->bullet1_icon }}"></i>{{ $feature->bullet1 }}</li>
+                                                @endif
+                                                @if( $feature->bullet2_icon && $feature->bullet2 )
+                                                <li><i class="{{ $feature->bullet2_icon }}"></i>{{ $feature->bullet2 }}</li>
+                                                @endif
+                                                @if( $feature->bullet3_icon && $feature->bullet3 )
+                                                <li><i class="{{ $feature->bullet3_icon }}"></i>{{ $feature->bullet3 }}</li>
+                                                @endif
                                             </ul>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        @endfor
+                        @endforeach
                     </div>
+                    @endif
 
                 </section>
             </div>

@@ -11342,12 +11342,19 @@ body > div {
 }
 
 .features .features-slider .background ul li {
+  position: relative;
   margin: 0 0 1rem;
   color: #FFF;
 }
 
 .features .features-slider .background ul li:last-of-type {
   margin: 0;
+}
+
+.features .features-slider .background ul li i {
+  position: absolute;
+  top: 4px;
+  left: -25px;
 }
 
 .features .tns-outer .tns-controls button:first-of-type {
@@ -11415,6 +11422,12 @@ h1 {
   .jumbotron h1 {
     font-size: 12rem;
     letter-spacing: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .features .features-slider .background .banner-gradient {
+    background: linear-gradient(60deg, rgba(0, 0, 0, 0.33) 40%, rgba(0, 0, 0, 0.85) 66%);
   }
 }
 
