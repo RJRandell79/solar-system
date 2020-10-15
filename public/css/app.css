@@ -11316,36 +11316,46 @@ body > div {
   text-align: right;
 }
 
-.features .background {
-  position: relative;
+.features .features-slider {
   margin: 6rem 0;
-  background: #000;
 }
 
-.features .background .banner-gradient {
+.features .features-slider .background {
+  position: relative;
+}
+
+.features .features-slider .background .banner-gradient {
   background: linear-gradient(60deg, rgba(253, 187, 45, 0) 40%, rgba(0, 0, 0, 0.7) 66%);
 }
 
-.features .background p {
+.features .features-slider .background p {
   float: none;
   width: 100%;
   margin: 0 0 1rem;
   text-align: left;
 }
 
-.features .background ul {
+.features .features-slider .background ul {
   list-style-type: none;
   margin: 0 0 6rem;
   padding: 0 0 0 6rem;
 }
 
-.features .background ul li {
+.features .features-slider .background ul li {
   margin: 0 0 1rem;
   color: #FFF;
 }
 
-.features .background ul li:last-of-type {
+.features .features-slider .background ul li:last-of-type {
   margin: 0;
+}
+
+.features .tns-outer .tns-controls button:first-of-type {
+  left: 30px;
+}
+
+.features .tns-outer .tns-controls button:last-of-type {
+  right: 30px;
 }
 
 h1 {

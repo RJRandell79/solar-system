@@ -37389,6 +37389,18 @@ if (document.querySelector('.planets-slider') !== null) {
   });
 }
 
+if (document.querySelector('.features-slider') !== null) {
+  Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
+    container: '.features-slider',
+    gutter: 15,
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoHeight: true,
+    controlsText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/sass/app.scss":

@@ -371,33 +371,45 @@ body > div {
     margin: 0 14px 1rem 0;
     text-align: right;
   }
-  .background {
-    position: relative;
+  .features-slider {
     margin: 6rem 0;
-    background: #000;
-    .banner-gradient {
-      background: linear-gradient(60deg, rgba(253,187,45,0) 40%, rgba(0,0,0,0.7) 66%);
-    }
-    p {
-      float: none;
-      width: 100%;
-      margin: 0 0 1rem;
-      text-align: left;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0 0 6rem;
-      padding: 0 0 0 6rem;
-      li {
+    .background {
+      position: relative;
+      .banner-gradient {
+        background: linear-gradient(60deg, rgba(253,187,45,0) 40%, rgba(0,0,0,0.7) 66%);
+      }
+      p {
+        float: none;
+        width: 100%;
         margin: 0 0 1rem;
-        color: #FFF;
-        &:last-of-type {
-          margin: 0;
+        text-align: left;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0 0 6rem;
+        padding: 0 0 0 6rem;
+        li {
+          margin: 0 0 1rem;
+          color: #FFF;
+          &:last-of-type {
+            margin: 0;
+          }
         }
       }
     }
   }
-
+  .tns-outer {
+    .tns-controls {
+      button {
+        &:first-of-type {
+          left: 30px;
+        }
+        &:last-of-type {
+          right: 30px;
+        }
+      }
+    }
+  }
 }
 
 h1 {
