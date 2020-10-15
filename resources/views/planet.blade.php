@@ -203,6 +203,8 @@
                                 <p>{{ $planet->environment->more_details }}</p>
                             </div>
                             <div class="col-md-4">
+                                <div id="chartdata" class="d-none">{ "a": 9, "b": 20, "c":30, "d":8, "e":12 }</div>
+                                <div id="atmo"></div>
                             </div>
                             <div class="col-md-4">
                                 <p>{{ $planet->environment->atmosphere_description }}</p>
@@ -214,5 +216,6 @@
         </div>
     </body>
 
+    <script src="https://d3js.org/d3.v4.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </html>

@@ -11381,6 +11381,7 @@ body > div {
 .indepth .further-details div {
   display: flex;
   align-items: flex-end;
+  margin: 0 auto;
 }
 
 .indepth .further-details div p {
