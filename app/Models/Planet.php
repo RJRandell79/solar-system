@@ -24,5 +24,9 @@ class Planet extends Model
     public function features() {
         return $this->morphMany(Features::class, 'featureable');
     }
+
+    public function environment() {
+        return $this->hasOne(Environment::class);
+    }
 }
  

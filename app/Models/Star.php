@@ -12,4 +12,8 @@ class Star extends Model
     public function planets() {
         return $this->hasMany(Planet::class);
     }
+
+    public function environment() {
+        return $this->HasOne(Environment::class);
+    }
 }

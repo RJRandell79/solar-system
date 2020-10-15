@@ -188,6 +188,26 @@
                     @endif
 
                 </section>
+
+                <section class="indepth">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <hr />
+                                <h2>In Depth</h2>
+                                <p>{{ $planet->environment->overview }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                            </div>
+                            <div class="col-4">
+                            </div>
+                            <div class="col-4">
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </body>
