@@ -203,7 +203,7 @@
                                 <p>{{ $planet->environment->more_details }}</p>
                             </div>
                             <div class="col-md-4">
-                                <div id="chartdata" class="d-none">{ "a": 9, "b": 20, "c":30, "d":8, "e":12 }</div>
+                                <div id="chartdata" class="d-none">{{ $planet->planetAtmosphere($planet->id) }}</div>
                                 <div id="atmo"></div>
                             </div>
                             <div class="col-md-4">

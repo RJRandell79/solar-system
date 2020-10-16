@@ -20,4 +20,8 @@ class Moon extends Model
     public function environment() {
         return $this->hasOne(Environment::class);
     }
+
+    public function atmosphere() {
+        return $this->hasOne(Atmosphere::class);
+    }
 }
