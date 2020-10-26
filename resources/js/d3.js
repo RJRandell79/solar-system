@@ -19,4 +19,4 @@ var pie = d3.pie().value(function(d) {return d.value; })
 var data_ready = pie(d3.entries(data))
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-svg.selectAll('whatever').data(data_ready).enter().append('path').attr('d', d3.arc().innerRadius(100).outerRadius(radius)).attr('fill', function(d){ return(color(d.data.key)) }).attr("stroke", "black").style("stroke-width", "2px").style("opacity", 0.7)
+svg.selectAll('whatever').data(data_ready).enter().append('path').attr('d', d3.arc().innerRadius(100).outerRadius(radius)).attr('fill', function(d){ return(color(d.data.key)) }).attr("stroke", "black").style("stroke-width", "2px").style("opacity", 1)
