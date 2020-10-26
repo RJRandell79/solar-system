@@ -11380,12 +11380,30 @@ body > div {
 
 .indepth .further-details div {
   display: flex;
-  align-items: flex-end;
   margin: 0 auto;
+  align-items: flex-end;
 }
 
 .indepth .further-details div p {
   color: #999;
+}
+
+.indepth .further-details div.chart {
+  position: relative;
+}
+
+.indepth .further-details div.chart p {
+  position: absolute;
+  top: 80px;
+  left: 55px;
+  color: #999;
+  line-height: 1.5rem;
+}
+
+.indepth .further-details div.chart p span {
+  display: block;
+  font-size: 2rem;
+  color: #FFF;
 }
 
 h1 {

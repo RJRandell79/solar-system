@@ -204,7 +204,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div id="chartdata" class="d-none">{{ $planet->planetAtmosphere($planet->id) }}</div>
-                                <div id="atmo"></div>
+                                <div id="atmo" class="chart">
+                                    <p><span>{{ $planet->largestElement($planet->id)->maxValue }}%</span> {{ $planet->largestElement($planet->id)->maxKey }}</p>
+                                </div>
                             </div>
                             <div class="col-md-4">
                                 <p>{{ $planet->environment->atmosphere_description }}</p>

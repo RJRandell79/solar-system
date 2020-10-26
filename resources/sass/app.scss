@@ -430,6 +430,21 @@ body > div {
       p {
         color: #999;
       }
+      &.chart {
+        position: relative;
+        p {
+          position: absolute;
+          top: 80px;
+          left: 55px;
+          color: #999;
+          line-height: 1.5rem;
+          span {
+            display: block;
+            font-size: 2rem;
+            color: #FFF;
+          }
+        }
+      }
     }
   }
 }
