@@ -37353,7 +37353,7 @@ var data_ready = pie(d3.entries(data)); // Build the pie chart: Basically, each 
 
 svg.selectAll('whatever').data(data_ready).enter().append('path').attr('d', d3.arc().innerRadius(100).outerRadius(radius)).attr('fill', function (d) {
   return color(d.data.key);
-}).attr("stroke", "black").style("stroke-width", "2px").style("opacity", 0.7);
+}).attr("stroke", "black").style("stroke-width", "2px").style("opacity", 1);
 
 /***/ }),
 

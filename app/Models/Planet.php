@@ -39,8 +39,23 @@ class Planet extends Model
         return $atmosphere;
     }
 
-    public function largestElement($planet_id) {
-        $atmosphereEls = $this->planetAtmosphere($planet_id);
+    public function atmosphericBreakdown($planet_id) {
+        $atmosphere = $this->planetAtmosphere($planet_id)->toArray();
+
+        $x = 0;
+        $colours = ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"];
+
+        $html = '<table class="element-table" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="50%">Element</td><td width="50%">Value (%)</td></tr>';
+        foreach($atmosphere as $element => $value) :
+        $html .= '<tr style="background:' . $colours[$x] . '"><td width="50%">' . ucfirst($element) . '</td><td width="50%">' . $value . '</td></tr>';
+        $x++; endforeach;
+        $html .= '</table>';
+
+        return $html;
+    }
+
+    public function largestAtmosphericElement($planet_id) {
+        $atmosphereEls = $this->atmosphereQuery($planet_id);
 
         $highest_value = (max($atmosphereEls->toArray()));
         $highest_key = (array_search(max($atmosphereEls->toArray()), $atmosphereEls->toArray()));
